@@ -7,7 +7,7 @@ This repository is part of my daily commitment to mastering **Data Structures & 
 
 ## 📈 Progress Log
 
-- 💡 Problems solved: **6**
+- 💡 Problems solved: **5**
 - 🔁 Updated daily
 - 📅 Started: `2025-07-05`
 
