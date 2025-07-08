@@ -3,6 +3,25 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+# Problem: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/
+# Difficulty: Medium
+
+
+# Time: O(n)
+# Space: O(n)
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution(object):
     def deleteMiddle(self, head):
         itr=head

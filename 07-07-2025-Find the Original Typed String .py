@@ -1,4 +1,24 @@
+# Problem: https://leetcode.com/problems/find-the-original-typed-string-i/description/
+# Difficulty: Easy
+
+
+# Time: O(n)
+# Space: O(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution(object):
+
     def possibleStringCount(self, word):
         output=0
         x=""
