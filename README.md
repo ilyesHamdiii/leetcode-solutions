@@ -7,7 +7,7 @@ This repository is part of my daily commitment to mastering **Data Structures & 
 
 ## 📈 Progress Log
 
-- 💡 Problems solved: **5**
+- 💡 Problems solved: **10**
 - 🔁 Updated daily
 - 📅 Started: `2025-07-05`
 
@@ -25,6 +25,6 @@ Inside each file:
 - 🔗 Problem link
 - 🏷️ Tags (Array, HashMap, DFS, etc.)
 - 🧠 Time & Space complexity
-- ✅ Final solution (with optional explanation)
+- ✅ Final solution
 
 ---
