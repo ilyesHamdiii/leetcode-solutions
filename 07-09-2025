@@ -1,0 +1,23 @@
+# Problem: https://leetcode.com/problems/rotated-digits/
+# Difficulty: Medium
+
+
+# Time: O(n)
+# Space: O(n)
+#kids with the greates number of candy
+
+
+
+
+
+
+
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        res=[]
+        for i in range (len(candies)):
+            if(candies[i]+extraCandies>= max(candies)):
+                res.append(True)
+            else:
+                res.append(False)
+        return res
