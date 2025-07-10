@@ -1,3 +1,23 @@
+# Problem:https://leetcode.com/problems/can-place-flowers/description/
+# Difficulty: Medium
+
+
+# Time: O(n)
+# Space: O(n)
+#kids with the greates number of candy
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution(object):
     def canPlaceFlowers(self, flowerbed, n):
         if n == 0:
