@@ -1,0 +1,33 @@
+# Problem: https://leetcode.com/problems/reverse-vowels-of-a-string/?envType=study-plan-v2&envId=leetcode-75
+# Difficulty: Easy
+
+
+# Time: O(n)
+# Space: O(n)
+class Solution(object):
+    def reverseVowels(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        Vowels = ['A','E','I','O','U','a','e','i','o','u']
+        s = [x for x in s]
+        Left = 0
+        Right = len(s)-1
+        try:
+            while Left < Right:
+                if s[Left] in Vowels and s[Right] in Vowels:
+                    s[Left],s[Right] = s[Right],s[Left]
+                    Left += 1
+                    Right -= 1
+                elif s[Left] in Vowels and s[Right] not in Vowels:
+                    Right -= 1
+                elif s[Left] not in Vowels and s[Right] in Vowels:
+                    Left += 1
+                else:
+                    Left += 1
+                    Right -= 1
+        except:
+            pass
+        return ''.join(s)
+            
