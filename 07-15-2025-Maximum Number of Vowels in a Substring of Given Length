@@ -1,3 +1,14 @@
+# Problem:https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
+# Difficulty: Medium
+
+
+# Time: O(n)
+# Space: O(n)
+
+
+
+
+
 class Solution(object):
     def maxVowels(self, s, k):
         """
