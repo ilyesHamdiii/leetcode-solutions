@@ -2,8 +2,8 @@
 
 # Difficulty:Medium
 
-# Time: O(1)
-
+# Time: O(n)
+import math
 # Space: O(n)
 
 class Solution(object):
