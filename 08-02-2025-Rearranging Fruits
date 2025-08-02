@@ -1,0 +1,40 @@
+#https://leetcode.com/problems/pascals-triangle/description/?envType=daily-question&envId=2025-08-01
+
+# Difficulty:Hard
+
+# Time: O(n + m log m))
+
+# Space: O(n*n)
+class Solution(object):
+    def minCost(self, basket1, basket2):
+        """
+        :type basket1: List[int]
+        :type basket2: List[int]
+        :rtype: int
+        """
+        count = {}
+        for a in basket1:
+            count[a] = count.get(a, 0) + 1
+        for b in basket2:
+            count[b] = count.get(b, 0) - 1
+        
+        excess1 = []
+        excess2 = []
+        for x in count:
+            if count[x] % 2 != 0:
+                return -1
+            if count[x] > 0:
+                # Only half are excess
+                excess1 += [x] * (count[x] // 2)
+            else:
+                # Only half are excess
+                excess2 += [x] * ((-count[x])// 2)
+
+        excess1.sort()
+        excess2.sort(reverse=True)
+        min_val = min(min(basket1), min(basket2))
+        ans = 0
+        for x, y in zip(excess1, excess2):
+            ans += min(min(x, y), 2 * min_val)
+
+        return ans
