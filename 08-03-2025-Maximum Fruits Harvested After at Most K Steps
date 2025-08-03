@@ -1,0 +1,39 @@
+#https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/description/?envType=daily-question&envId=2025-08-03
+
+# Difficulty:Hard
+
+# Time: O(n*n)
+
+# Space: O(n*n)
+from bisect import bisect_left, bisect_right
+from typing import List
+
+class Solution:
+    def maxTotalFruits(self, fruits: List[List[int]], startPos: int, k: int) -> int:
+        positions = [f[0] for f in fruits]
+        amounts = [f[1] for f in fruits]
+        
+        prefix = [0]
+        for amt in amounts:
+            prefix.append(prefix[-1] + amt)
+
+        def range_sum(l: int, r: int) -> int:
+            return prefix[r + 1] - prefix[l]
+
+        max_fruits = 0
+        n = len(fruits)
+
+        for i in range(n):
+            for j in range(i, n):
+                left = fruits[i][0]
+                right = fruits[j][0]
+
+                min_steps = min(
+                    abs(startPos - left) + (right - left),
+                    abs(startPos - right) + (right - left)
+                )
+
+                if min_steps <= k:
+                    max_fruits = max(max_fruits, range_sum(i, j))
+
+        return max_fruits
