@@ -21,4 +21,3 @@ class Solution:
             else:
                 prev=curr
         return res
-
