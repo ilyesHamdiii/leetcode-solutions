@@ -1,6 +1,5 @@
 #https://leetcode.com/problems/power-of-three/
 # Difficulty:Medium
-
 # Time:o(n)
 
 # Space: O(1)
@@ -17,5 +16,3 @@ class Solution:
                     break
                 if n<3**x:
                     return False
-
-        
